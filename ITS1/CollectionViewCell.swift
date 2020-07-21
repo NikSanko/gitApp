@@ -15,8 +15,5 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameOfPerson: UILabel!
     
     @IBOutlet weak var personalAge: UILabel!
-    //    @IBOutlet weak var imageView: UIImageView!
-//
-//    @IBOutlet weak var nameOfPerson: UILabel!
    
 }

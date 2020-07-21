@@ -167,7 +167,6 @@ class PreviewPage: UIViewController, PopUpViewDelegate {
                     let gender = eachData["gender"] as! String
                     let id = eachData["id"] as! Int
                     let dateOfBirtdh = eachData["dateOfBirtdh"] as! String
-                    //                                let dateOfBirtdhFormatted = self.formDate(date: dateOfBirtdh)
                     let email = eachData["email"] as! String
                     guard let convertedDate = dateFormatter.date(from: dateOfBirtdh) else { return }
                     
@@ -189,15 +188,12 @@ class PreviewPage: UIViewController, PopUpViewDelegate {
     @objc func refresh(){
         
         DispatchQueue.main.async {
-            //                (self.newData).sort(by: { $0.convertedDate > $1.convertedDate })
             for obj in self.newData {
                 print(obj.convertedDate)
             }
             self.collectionView.reloadData()
         }
         refreshControl.endRefreshing()
-        //            print("1")
-        //            sortData()
     }
     
     //-----------------
@@ -241,7 +237,6 @@ class PreviewPage: UIViewController, PopUpViewDelegate {
         }
         
         DispatchQueue.main.async {
-            //
             self.collectionView.reloadData()
         }
         refreshControl.endRefreshing()
